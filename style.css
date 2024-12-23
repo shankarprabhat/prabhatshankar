@@ -1,0 +1,91 @@
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f9;
+    color: #333;
+}
+
+header {
+    background: #007acc;
+    color: white;
+    padding: 1rem 0;
+    text-align: center;
+}
+
+nav {
+    background: #005a99;
+    color: white;
+    display: flex;
+    justify-content: center;
+    padding: 0.5rem 0;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 1rem;
+    font-weight: bold;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+.container {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 1rem;
+    background: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+h1 {
+    color: #007acc;
+}
+
+section {
+    margin-bottom: 2rem;
+}
+
+footer {
+    text-align: center;
+    padding: 1rem 0;
+    background: #007acc;
+    color: white;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+
+.course-table-beauty {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    border: 1px solid #007acc;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.course-table-beauty th, .course-table-beauty td {
+    border: 1px solid #007acc;
+    padding: 10px;
+    text-align: left;
+}
+
+.course-table-beauty th {
+    background-color: #007acc;
+    color: white;
+    font-weight: bold;
+}
+
+.course-table-beauty tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.course-table-beauty tr:hover {
+    background-color: #e0f7fa;
+}
+
