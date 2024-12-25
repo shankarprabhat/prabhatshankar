@@ -89,3 +89,30 @@ footer {
     background-color: #e0f7fa;
 }
 
+.course-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+}
+.course {
+    margin: 20px;
+}
+.course img {
+    max-width: 300px;
+    height: auto;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+}
+.course a {
+    display: block;
+    margin-top: 10px;
+    text-decoration: none;
+    color: #007bff; 
+    font-weight: bold;
+}
+.course a:hover {
+    color: #0056b3;
+    text-decoration: underline;
+}
+

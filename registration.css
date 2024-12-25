@@ -1,0 +1,31 @@
+#course-registration {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-size: 18px;
+    font-family: Arial, sans-serif;
+    text-align: left;
+}
+#course-registration th, #course-registration td {
+    border: 1px solid #dddddd;
+    padding: 12px 15px;
+}
+#course-registration th {
+    background-color: #007bff;
+    color: white;
+    font-weight: bold;
+}
+#course-registration tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+#course-registration tr:hover {
+    background-color: #f1f1f1;
+}
+#course-registration td a {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: bold;
+}
+#course-registration td a:hover {
+    text-decoration: underline;
+}
