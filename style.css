@@ -11,6 +11,35 @@ header {
     color: white;
     padding: 1rem 0;
     text-align: center;
+    background-image: url('assets/images/header.png');
+    background-size: cover; /* Ensures the image covers the header area */
+    background-repeat: no-repeat; /* Prevents repetition */
+    background-position: center; /* Centers the image */
+    width: 100%;
+    height: 100vh; /* Full viewport height or a specific height */
+    padding: 0;
+    margin: 0;
+}
+
+header img {
+    width: 100%; /* Full width of the viewport */
+    height: auto; /* Maintain aspect ratio */
+    margin: 0;
+    padding: 0;
+    display: block;
+    object-fit: cover;
+}
+
+.header-background {
+    background-image: url('assets/images/.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+    height: 100vh; /* Full viewport height */
+    display: flex; /* Optional: Align content */
+    justify-content: center; /* Optional: Center horizontally */
+    align-items: center; /* Optional: Center vertically */
 }
 
 nav {
