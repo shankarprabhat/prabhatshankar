@@ -2,11 +2,15 @@ const express = require('express');
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 
+const cors = require('cors');
+
 const app = express();
 app.use(bodyParser.json());
 
+app.use(cors());
+
 // MongoDB connection
-const uri = 'your_mongodb_connection_string'; // Replace with your MongoDB URI
+const uri = 'mongodb+srv://prabhat4686:iKN_QTu4TAxb966@cluster0.1ke96.mongodb.net/data-science-coaching'; // Replace with your MongoDB URI
 mongoose.connect(uri, { useNewUrlParser: true, useUnifiedTopology: true })
     .then(() => console.log("Connected to MongoDB"))
     .catch(err => console.error("Error connecting to MongoDB:", err));
@@ -20,14 +24,19 @@ const userSchema = new mongoose.Schema({
     additional: String,
     paymentStatus: String
 });
-const User = mongoose.model('User', userSchema);
+const User = mongoose.model('User', userSchema,'ds-beginner-offline');
 
 // API to handle form submissions
 app.post('/register', async (req, res) => {
-    const { name, email, password } = req.body;
+    const { name, email, mobile, profession, additional, paymentStatus} = req.body;
+
+    // Validation
+    // if (!name || !email || !mobile || !profession || !paymentStatus) {
+    //     return res.status(400).json({ error: "All required fields must be filled" });
+    // }
 
     // Create and save user in the database
-    const newUser = new User({ name, email, password });
+    const newUser = new User({ name, email, mobile, profession, additional, paymentStatus});
     try {
         await newUser.save();
         res.status(201).send("User registered successfully!");

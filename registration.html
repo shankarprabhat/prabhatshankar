@@ -14,7 +14,7 @@
     </header>
     
     <nav>
-        <a href="#home">Home</a>
+        <a href="./index.html">Home</a>
         <a href="./data-science-class.html">Data Science Classes</a>
     </nav>
 
@@ -27,16 +27,16 @@
         <input type="email" id="email" name="email" required><br><br>
 
         <label for="Mobile">Mobile:</label>
-        <input type="mobile" id="mobile" name="mobile" required><br><br>
+        <input type="tel" id="mobile" name="mobile" required><br><br>
 
         <label for="Profession">Profession:</label>
-        <input type="profession" id="profession" name="profession" required><br><br>
+        <input type="text" id="profession" name="profession" required><br><br>
 
         <label for="Additional">Additional Comments:</label>
-        <input type="additional" id="additional-comments" name="additional" required><br><br>
+        <input type="text" id="additional" name="additional" required><br><br>
 
         <label for="payment">Payment:</label>
-        <input type="payment" id="payment" name="payment" required><br><br>
+        <input type="text" id="payment" name="payment" required><br><br>
 
         <button type="submit">Register</button>
     </form>
@@ -47,12 +47,15 @@
 
             const name = document.getElementById('name').value;
             const email = document.getElementById('email').value;
-            const password = document.getElementById('password').value;
+            const mobile = document.getElementById('mobile').value;
+            const profession = document.getElementById('profession').value;
+            const additional = document.getElementById('additional').value;
+            const payment = document.getElementById('payment').value;
 
-            const response = await fetch('/register', {
+            const response = await fetch('http://localhost:3000/register', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({ name, email, password })
+                body: JSON.stringify({ name, email, mobile, profession, additional, payment })
             });
 
             if (response.ok) {
