@@ -10,7 +10,8 @@ app.use(bodyParser.json());
 app.use(cors());
 
 // MongoDB connection
-const uri = 'mongodb+srv://prabhat4686:iKN_QTu4TAxb966@cluster0.1ke96.mongodb.net/data-science-coaching'; // Replace with your MongoDB URI
+// Replace with your MongoDB URI
+const uri = 'mongodb+srv://prabhat4686:iKN_QTu4TAxb966@cluster0.1ke96.mongodb.net/data-science-coaching'; 
 mongoose.connect(uri, { useNewUrlParser: true, useUnifiedTopology: true })
     .then(() => console.log("Connected to MongoDB"))
     .catch(err => console.error("Error connecting to MongoDB:", err));
@@ -45,7 +46,13 @@ app.post('/register', async (req, res) => {
     }
 });
 
-// Start the server
-app.listen(3000, () => {
-    console.log("Server running on http://localhost:3000");
-});
+// Use the environment variable
+const port = process.env.PORT || 3000; // Default to 3000 if PORT is not set
+
+// If using local, Start the server
+// app.listen(port, () => {
+//     console.log("Server running on http://localhost:3000");
+// });
+
+// Export the app for Vercel
+module.exports = app;
